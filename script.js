@@ -153,17 +153,17 @@
             if (currentDateIndex > 20) currentDateIndex = 20; // Limit to 3 weeks
             displayDailySchedule();
         }
-        // Special code for dev viewers 2010
+        // Special code for dev viewers 1206
 
         function displayProgress() {
             const subjects = ['Mathematics', 'English', 'Science', 'Social Science', 'Hindi', 'Computer Science'];
             const progress = {
-                'Mathematics': 0o0,
-                'English': 0o0,
-                'Science': 0o0,
-                'Social Science': 0o0,
-                'Hindi': 0o0,
-                'Computer Science': 0o0
+                'Mathematics': 50,
+                'English': 50,
+                'Science': 50,
+                'Social Science': 50,
+                'Hindi': 50,
+                'Computer Science': 50
             };
             
             const container = document.getElementById('progressSection');
