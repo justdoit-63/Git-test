@@ -1,0 +1,236 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #00ced1 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .exam-dates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .exam-card {
+            background: rgba(0, 206, 209, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #00ced1;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .exam-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 206, 209, 0.3);
+        }
+
+        .exam-date {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #00ced1;
+        }
+
+        .exam-subject {
+            font-size: 1.3rem;
+            margin-top: 5px;
+        }
+
+        .days-left {
+            background: #1e3c72;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .study-schedule {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .schedule-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .date-nav {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: #00ced1;
+            color: #1e3c72;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #20b2aa;
+            transform: scale(1.05);
+        }
+
+        .current-date {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #00ced1;
+        }
+
+        .daily-schedule {
+            display: grid;
+            gap: 15px;
+        }
+
+        .time-slot {
+            background: rgba(30, 60, 114, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #00ced1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .time-slot:hover {
+            background: rgba(30, 60, 114, 0.5);
+            transform: translateX(5px);
+        }
+
+        .time-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .time {
+            font-weight: bold;
+            color: #00ced1;
+            font-size: 1.1rem;
+        }
+
+        .subject {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        .topics {
+            font-size: 0.9rem;
+            color: #b8e6ff;
+        }
+
+        .priority {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .high { background: #ff6b6b; }
+        .medium { background: #ffa726; }
+        .low { background: #66bb6a; }
+
+        .progress-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .progress-bar {
+            background: rgba(30, 60, 114, 0.3);
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ced1, #20b2aa);
+            transition: width 0.3s ease;
+        }
+
+        .subject-progress {
+            margin: 15px 0;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            accent-color: #00ced1;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .exam-dates {
+                grid-template-columns: 1fr;
+            }
+            
+            .schedule-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .time-slot {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }

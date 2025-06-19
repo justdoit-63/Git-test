@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exam Study Planner</title>
+    <link rel="stylesheet" href="Project 202.css">
 </head>
 <body>
-    <h1> welcome  </h1>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Exam Study Planner</h1>
+            <p>Your personalized daily study schedule for upcoming exams</p>
+        </div>
+
+        <div class="exam-dates" id="examDates">
+            <!-- Exam cards will be populated by JavaScript -->
+        </div>
+
+        <div class="study-schedule">
+            <div class="schedule-header">
+                <h2>📅 Daily Study Schedule</h2>
+                <div class="date-nav">
+                    <button class="nav-btn" onclick="changeDate(-1)">← Previous</button>
+                    <div class="current-date" id="currentDate">Today</div>
+                    <button class="nav-btn" onclick="changeDate(1)">Next →</button>
+                </div>
+            </div>
+            <div class="daily-schedule" id="dailySchedule">
+                <!-- Daily schedule will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <h2>📊 Subject Progress</h2>
+            <div id="progressSection">
+                <!-- Progress bars will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="Project 202.js"></script>
 </body>
 </html>
